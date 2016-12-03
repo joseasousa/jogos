@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Diagnostics;
 
 public class PlayerController : MonoBehaviour
 {
@@ -52,4 +53,27 @@ public class PlayerController : MonoBehaviour
         t.Rotate(new Vector3(0, 180, 0));
         isRigth = !isRigth;
     }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "portal")
+        {
+            t.position = new Vector3(56.5f, 0, 0);    
+        }
+        else if (other.tag == "death")
+        {
+            t.position = new Vector3(0, 0, 0);     
+        }
+
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "des")
+        {
+            Destroy(col.gameObject);
+        }
+    }
+
 }
