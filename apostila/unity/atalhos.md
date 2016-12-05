@@ -11,49 +11,49 @@
 | Z            | Pivot Mode toggle     |
 | X            | Pivot Rotation Toggle |
 | V            | Vertex Snap           |
-| CTRL/CMD+LMB | Snap                  |
+| CTRL+LMB | Snap                  |
 
 
 
 | Window           |                 |
 |------------------|-----------------|
-| CTRL/CMD+1       | Scene           |
-| CTRL/CMD+2       | Game            |
-| CTRL/CMD+3       | Inspector       |
-| CTRL/CMD+4       | Hierarchy       |
-| CTRL/CMD+5       | Project         |
-| CTRL/CMD+6       | Animation       |
-| CTRL/CMD+7       | Profiler        |
-| CTRL/CMD+9       | Asset store     |
-| CTRL/CMD+0       | Version Control |
-| CTRL/CMD+SHIFT+C | Console         |
+| CTRL+1       | Scene           |
+| CTRL+2       | Game            |
+| CTRL+3       | Inspector       |
+| CTRL+4       | Hierarchy       |
+| CTRL+5       | Project         |
+| CTRL+6       | Animation       |
+| CTRL+7       | Profiler        |
+| CTRL+9       | Asset store     |
+| CTRL+0       | Version Control |
+| CTRL+SHIFT+C | Console         |
 
 
 
 |Selection          |                |
 |-------------------|----------------|
-|CTRL/CMD+SHIFT+1	|Load Selection 1|
-|CTRL/CMD+SHIFT+2	|Load Selection 2|
-|CTRL/CMD+SHIFT+3	|Load Selection 3|
-|CTRL/CMD+SHIFT+4	|Load Selection 4|
-|CTRL/CMD+SHIFT+5	|Load Selection 5|
-|CTRL/CMD+SHIFT+6	|Load Selection 6|
-|CTRL/CMD+SHIFT+7	|Load Selection 7|
-|CTRL/CMD+SHIFT+8	|Load Selection 8|
-|CTRL/CMD+SHIFT+9	|Load Selection 9|
-|CTRL/CMD+ALT+1	    |Save Selection 1|
-|CTRL/CMD+ALT+2	    |Save Selection 2|
-|CTRL/CMD+ALT+3	    |Save Selection 3|
-|CTRL/CMD+ALT+4	    |Save Selection 4|
-|CTRL/CMD+ALT+5	    |Save Selection 5|
-|CTRL/CMD+ALT+6	    |Save Selection 6|
-|CTRL/CMD+ALT+7	    |Save Selection 7|
-|CTRL/CMD+ALT+8	    |Save Selection 8|
-|CTRL/CMD+ALT+9	    |Save Selection 9|
+|CTRL+SHIFT+1	|Load Selection 1|
+|CTRL+SHIFT+2	|Load Selection 2|
+|CTRL+SHIFT+3	|Load Selection 3|
+|CTRL+SHIFT+4	|Load Selection 4|
+|CTRL+SHIFT+5	|Load Selection 5|
+|CTRL+SHIFT+6	|Load Selection 6|
+|CTRL+SHIFT+7	|Load Selection 7|
+|CTRL+SHIFT+8	|Load Selection 8|
+|CTRL+SHIFT+9	|Load Selection 9|
+|CTRL+ALT+1	    |Save Selection 1|
+|CTRL+ALT+2	    |Save Selection 2|
+|CTRL+ALT+3	    |Save Selection 3|
+|CTRL+ALT+4	    |Save Selection 4|
+|CTRL+ALT+5	    |Save Selection 5|
+|CTRL+ALT+6	    |Save Selection 6|
+|CTRL+ALT+7	    |Save Selection 7|
+|CTRL+ALT+8	    |Save Selection 8|
+|CTRL+ALT+9	    |Save Selection 9|
 
 
 |Assets     |       |
 |-----------|-------|
-|CTRL/CMD+R	|Refresh|
+|CTRL+R	|Refresh|
 
 
