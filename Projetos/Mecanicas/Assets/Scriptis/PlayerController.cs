@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     private float movX = 3;
 
-    public float speed = 40.0f;
-    public float forceJump = 300f;
+    public float speed = 40f;
+    public float forceJump = 10f;
 
     private bool isRigth;
 
@@ -25,11 +25,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Horizontal"))
-        {
-            movX = Input.GetAxis("Horizontal");  
-            rb.velocity = new Vector2(movX * speed, 0);
-        }	
+        movX = Input.GetAxis ("Horizontal");  
+		rb.velocity = new Vector2 (movX * speed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump"))
         {
