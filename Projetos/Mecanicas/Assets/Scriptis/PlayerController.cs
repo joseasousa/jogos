@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, layer);
+
         movX = Input.GetAxis("Horizontal");  
         rb.velocity = new Vector2(movX * speed, rb.velocity.y);
 
