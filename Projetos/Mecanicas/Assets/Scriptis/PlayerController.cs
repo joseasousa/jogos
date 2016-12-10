@@ -14,7 +14,11 @@ public class PlayerController : MonoBehaviour
 
     private Transform t;
 
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
+    public Transform groundCheck;
+    public bool isGround;
+
+    public LayerMask layer;
 
     // Use this for initialization
     void Start()
@@ -25,10 +29,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        movX = Input.GetAxis ("Horizontal");  
-		rb.velocity = new Vector2 (movX * speed, rb.velocity.y);
+        isGround = Physics2D.OverlapCircle(groundCheck.position, 0.1f, layer);
+        movX = Input.GetAxis("Horizontal");  
+        rb.velocity = new Vector2(movX * speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGround)
         {
             rb.velocity = new Vector2(0, forceJump);		
         }
