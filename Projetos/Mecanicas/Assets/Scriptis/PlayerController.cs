@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using System.Diagnostics;
+using UnityEngine.UI;
+
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,11 +22,18 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask layer;
 
+    public Text scoreM;
+    private int score;
+    public AudioClip sound;
+    private AudioSource audio;
+
+    public GameObject pedra;
     // Use this for initialization
     void Start()
     {
-        t = GetComponent <Transform>();
         rb = GetComponent<Rigidbody2D>();
+        score = 0;
+        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -53,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     void Flip()
     {
-        t.Rotate(new Vector3(0, 180, 0));
+        transform.Rotate(new Vector3(0, 180, 0));
         isRigth = !isRigth;
     }
 
@@ -62,12 +71,27 @@ public class PlayerController : MonoBehaviour
     {
         if (other.tag == "portal")
         {
-            t.position = new Vector3(56.5f, 0, 0);    
+            transform.position = new Vector3(56.5f, 0, 0);    
         }
         else if (other.tag == "death")
         {
-            t.position = new Vector3(0, 0, 0);     
+            transform.position = new Vector3(0, 0, 0);     
         }
+        else if (other.tag == "coin")
+        {
+            Destroy(other.gameObject);
+            scoreM.text = "Score: " + score;
+            score += 10;
+
+            audio.clip = sound;
+            audio.Play();
+        }
+        else if (other.tag == "trap")
+        {
+            Instantiate(pedra, new Vector3(other.transform.position.x, other.transform.position.y, 0), Quaternion.identity);
+            pedra.GetComponent<Rigidbody2D>().AddForce(new Vector2(800000, 0));
+        }
+       
 
     }
 
