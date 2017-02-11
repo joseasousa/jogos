@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-
-
+[RequireComponent(typeof(LifeControll))]
 public class PlayerController : MonoBehaviour
 {
+    private LifeControll l;
+
     private float movX = 3;
 
     public float speed = 40f;
@@ -23,17 +24,21 @@ public class PlayerController : MonoBehaviour
     public LayerMask layer;
 
     public Text scoreM;
+
     private int score;
     public AudioClip sound;
     private AudioSource audio;
 
     public GameObject pedra;
+
+
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         score = 0;
-        audio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>(); 
+        l = GetComponent<LifeControll>();
     }
 
     void Update()
@@ -55,6 +60,25 @@ public class PlayerController : MonoBehaviour
         else if (!isRigth && movX < 0)
         {
             Flip();
+        }
+
+        if (Input.GetKey("escape"))
+        {
+            if (Time.timeScale == 1f)
+            {
+                Time.timeScale = 0;    
+            }
+            else
+            {
+                Time.timeScale = 1f;    
+            }
+            
+        }
+
+        if (Input.GetKey("m"))
+        {
+            PlayerPrefs.SetInt("fase", 1);
+            SceneManager.LoadScene(0);
         }
 
         GetComponent <Animator>().SetFloat("speed", Math.Abs(movX));
@@ -90,6 +114,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(pedra, new Vector3(other.transform.position.x, other.transform.position.y, 0), Quaternion.identity);
             pedra.GetComponent<Rigidbody2D>().AddForce(new Vector2(800000, 0));
+            l.Hit(10);
         }
        
 
