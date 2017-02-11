@@ -2,6 +2,9 @@
 
 [Sistema Gestao](http://gestao-asousajose.rhcloud.com/)- 31/10
 
+## **Atividades**
+ -[Atividades](atividades.md)
+
 ## **Trabalhos**
 
 [Trabalho1](trabalhos.md)
